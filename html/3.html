@@ -3,13 +3,23 @@
   <head>
     <title>WEB 1 - JavaScript</title>
     <meta charset="utf-8" />
+    
     <script>   
+    
+    function wallColor(color){
+  document.querySelector('body').style.backgroundColor = color;
+}
+  function textColor(color){
+    document.querySelector.style.color = color;
+  }
       function nightDayHandler(self){
         var pepsi = document.querySelector('body');
           if(self.value === 'night'){
-            pepsi.style.backgroundColor = 'black';
+            wallColor('black');
             pepsi.style.color = 'white';
             self.value = 'day';
+
+
 
         var alist = document.querySelectorAll('a');
             var i = 0;
@@ -19,7 +29,7 @@
       }
 
           } else {
-            pepsi.style.backgroundColor = 'white';
+            wallColor('white');
             pepsi.style.color = 'black';
             self.value = 'night';
 
@@ -32,15 +42,11 @@
            }
         }
       }
-
     </script>
+
   </head>
   <body>
     <h1><a href="web.html" style="color: blue;">WEB</a></h1>
-
-    <input id="night_day" type="button" value="night" onclick="
-      nightDayHandler(this);
-    ">
 
     <input id="night_day" type="button" value="night" onclick="
       nightDayHandler(this);
